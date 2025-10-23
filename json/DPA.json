@@ -1,0 +1,37 @@
+[
+    {
+        "clause_id": "Introduction",
+        "heading": "GDPR Appendix Overview",
+        "summarised_text": "This Appendix outlines the terms for processing personal data under GDPR, designating UC as the Controller and Supplier as the Processor. It clarifies that this Appendix governs in case of conflict with the main Agreement and requires the Supplier to extend these obligations to any third-party Subprocessors."
+    },
+    {
+        "clause_id": "A",
+        "heading": "Definitions",
+        "summarised_text": "This section defines key terms used throughout the Appendix, including 'Applicable Data Protection Law' (EU and UK GDPR), 'Data' (personal data processed by the Processor), 'Data Subjects’ Rights' (e.g., access, rectification), 'EEA', specific GDPR terms (e.g., 'personal data', 'processing'), 'Subprocessor' (third party engaged by Processor), and 'UK'."
+    },
+    {
+        "clause_id": "B",
+        "heading": "Scope of Processing Data",
+        "summarised_text": "The Processor is authorized to process Data solely for performing the Services and for the duration of the Agreement, as detailed in Addendum A. The parties agree to cooperate in amending Addendum A or this Appendix if required by Applicable Data Protection Law."
+    },
+    {
+        "clause_id": "C",
+        "heading": "Subprocessors",
+        "summarised_text": "The Controller generally authorizes Subprocessors listed in Addendum A, but processing outside the US, UK, or EEA requires specific prior written approval. The Processor must provide prior written notice of any Subprocessor changes for Controller approval/objection and ensure Subprocessors are bound by written agreements to comply with this Appendix. The Processor remains fully liable for any Subprocessor's data protection failures and must provide copies of Subprocessor agreements upon request."
+    },
+    {
+        "clause_id": "D",
+        "heading": "Obligations of the Processor",
+        "summarised_text": "The Processor must process Data according to the Agreement, Appendix GDPR, or Controller's instructions, only for Services, and ensure confidentiality. It must comply with all applicable data protection laws and industry best practices, implement appropriate technical and organizational security measures, and assist the Controller with its GDPR obligations (e.g., security, breach notifications, DPIAs). The Processor must notify the Controller immediately (within 2 days) of any personal data breach, cooperate fully with investigations, and acknowledges that a breach may lead to Agreement termination. Data transfers outside the UK or EEA require Controller's prior written approval. If the Processor collects data directly, it is responsible for lawful basis. Specific rules apply for UK/EEA-based Subprocessors transferring data to the US. The Processor acknowledges Controller's US legal obligations for data retention/disclosure. Upon termination, the Processor must deliver or destroy Data (including Subprocessor's) within 30 days, certifying completion, unless legal storage is required."
+    },
+    {
+        "clause_id": "E",
+        "heading": "Data Subjects’ Rights",
+        "summarised_text": "The Controller is responsible for informing data subjects and responding to their requests, unless the Processor directly collects data. The Processor must notify the Controller within two business days of receiving any data subject request regarding their rights and provide assisting information. The Processor shall not respond to such requests without the Controller's prior written consent, unless legally mandated, and must assist the Controller in responding to these requests."
+    },
+    {
+        "clause_id": "F",
+        "heading": "Accountability",
+        "summarised_text": "Upon written request, the Processor must provide all information necessary to demonstrate compliance with this Appendix GDPR, making records, facilities, processes, and personnel available for audits or inspections. The Processor must also immediately inform the Controller if any instruction regarding Data processing appears to violate or contradict Applicable Data Protection Law."
+    }
+]

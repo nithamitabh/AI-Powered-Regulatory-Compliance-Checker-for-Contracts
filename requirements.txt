@@ -1,0 +1,10 @@
+google-genai
+python-dotenv
+numpy
+PyPDF2
+groq
+schedule
+streamlit
+schedule
+requests 
+pandas

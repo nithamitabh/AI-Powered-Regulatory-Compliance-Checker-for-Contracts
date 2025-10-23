@@ -1,0 +1,202 @@
+[
+    {
+        "clause_id": "DPA_Intro",
+        "heading": "GDPR Data Processing Agreement Introduction",
+        "summarised_text": "This GDPR Data Processing Agreement (DPA) is between the Controller and Proofpoint, Inc. (Processor), appended to their Services Agreement. It outlines terms for Processor's handling of Personal Data, incorporating the EU Standard Contractual Clauses (SCC). The Controller acts as Data Exporter, and Proofpoint as Data Importer. The DPA is effective upon Controller's signature and Proofpoint's receipt, provided specific submission instructions are followed. Any unauthorized revisions by the Controller are invalid. The DPA terminates with the Services Agreement."
+    },
+    {
+        "clause_id": "Schedule1_1",
+        "heading": "Definitions",
+        "summarised_text": "This clause defines key terms used in the DPA. 'Data Protection Laws' refers to applicable laws for Personal Data processing by Proofpoint. 'Data Subject' is the identified individual whose data is processed. 'Processing' aligns with GDPR Article 4.2. 'Subprocessor' is any processor engaged by Proofpoint, and 'Supervisory Authority' is an EU Member State public authority under GDPR. Other undefined terms derive meaning from GDPR or the Services Agreement."
+    },
+    {
+        "clause_id": "Schedule1_2",
+        "heading": "Processing of Personal Data",
+        "summarised_text": "This clause clarifies that the Controller is the data controller/exporter and Proofpoint is the data processor/importer for activities detailed in Appendix 1. The Controller warrants that its instructions to Proofpoint comply with Data Protection Laws. The Services Agreement and DPA define the scope, duration, nature, purpose, types of Personal Data, and categories of Data Subjects. The Controller is responsible for the accuracy, quality, and legality of the Personal Data and its acquisition."
+    },
+    {
+        "clause_id": "Schedule1_3",
+        "heading": "Data Protection Impact Assessment",
+        "summarised_text": "Proofpoint will offer reasonable cooperation and assistance to the Controller for fulfilling its GDPR obligation to conduct a Data Protection Impact Assessment (DPIA) related to the Service, provided the Controller lacks access to the necessary information and Proofpoint possesses it. Proofpoint will also assist the Controller in cooperating or consulting with the Supervisory Authority as required by GDPR."
+    },
+    {
+        "clause_id": "Schedule1_4",
+        "heading": "Rights of Data Subjects",
+        "summarised_text": "Proofpoint will promptly notify the Controller if it receives a request from a Data Subject exercising their rights (e.g., access, rectification, erasure). Proofpoint will assist the Controller, using appropriate technical and organizational measures, to fulfill the Controller's obligation to respond to such Data Subject requests."
+    },
+    {
+        "clause_id": "Schedule1_5",
+        "heading": "Limited use of Personal Data & personnel",
+        "summarised_text": "Proofpoint does not acquire any rights to the Personal Data, except as specified in the Services Agreement. Proofpoint and its affiliates must ensure the reliability of any personnel or Subprocessors with access to Personal Data, limiting access to those strictly needing it for the Services Agreement and ensuring they are bound by confidentiality obligations."
+    },
+    {
+        "clause_id": "Schedule1_6",
+        "heading": "Subprocessors",
+        "summarised_text": "The Controller provides general consent for Proofpoint to use Subprocessors, including affiliates and third parties. Proofpoint will have written agreements with Subprocessors that include data protection obligations no less protective than this DPA and remains fully responsible for their performance. A list of Subprocessors is available on Proofpoint's Trust Site, with email notifications for changes. The Controller may object to a new Subprocessor, and if accommodations cannot be made within 30 days, the Controller may terminate the affected Service."
+    },
+    {
+        "clause_id": "Schedule1_7",
+        "heading": "Special categories of Personal Data",
+        "summarised_text": "The Controller is solely responsible for complying with data protection and privacy laws concerning special categories of Personal Data (e.g., racial, health, political opinions) that may require specific handling."
+    },
+    {
+        "clause_id": "Schedule1_8",
+        "heading": "Security of Personal Data",
+        "summarised_text": "Proofpoint must implement the technical and organizational measures specified in Appendix 2 to ensure the security of Personal Data, protecting it against breaches, destruction, loss, alteration, or unauthorized access. This assessment considers the state of the art, implementation costs, nature, scope, context, purposes of processing, and risks to Data Subjects. Access to Personal Data is limited to necessary personnel who are bound by confidentiality."
+    },
+    {
+        "clause_id": "Schedule1_9",
+        "heading": "Cooperation with Supervisory Authorities",
+        "summarised_text": "Upon the Controller's request, Proofpoint will provide reasonable cooperation and assistance for the Controller to fulfill its GDPR obligations regarding Data Protection Impact Assessments and cooperation/prior consultation with the Supervisory Authority. Proofpoint will also make reasonable efforts, at the Controller's expense, to secure Subprocessor assistance for these obligations."
+    },
+    {
+        "clause_id": "Schedule1_10",
+        "heading": "Personal Data Breach",
+        "summarised_text": "In the event of a known Security Breach (unauthorized use, disclosure, or acquisition of Personal Data), Proofpoint will notify the Controller in writing within 48 hours and provide periodic updates. The notification will include a description of the breach, contact details, likely consequences, and measures taken or proposed. If all information is not immediately available, it will be provided without undue delay as it becomes known."
+    },
+    {
+        "clause_id": "Schedule1_11",
+        "heading": "International Transfer of Data",
+        "summarised_text": "Proofpoint will comply with applicable Data Protection Laws for international transfers of Personal Data from the European Economic Area. Personal Data may be transferred and processed in any country where Proofpoint or its Subprocessors operate. All transfers outside the EEA will be governed by the Standard Contractual Clauses (Schedule 2). Proofpoint has also compiled a Data Transfer Assessment (Transfer Impact Assessment) for transfers to the United States, available online."
+    },
+    {
+        "clause_id": "Schedule1_12",
+        "heading": "Governmental queries",
+        "summarised_text": "In line with SCC Clause 15, Proofpoint will not disclose Customer Data to third parties unless necessary for the Service or to comply with a valid governmental order. If a governmental body requests sensitive Customer Data, Proofpoint will attempt to redirect the request to the Customer and, if compelled to disclose, will provide reasonable notice to the Customer to seek a protective order, unless legally prohibited. Proofpoint believes it is unlikely to be subject to FISA requests."
+    },
+    {
+        "clause_id": "Schedule1_13",
+        "heading": "Verification and audit",
+        "summarised_text": "Proofpoint will provide information to the Controller, upon reasonable written request and subject to an NDA, to demonstrate DPA compliance. Proofpoint will allow onsite inspections by the Controller or an independent auditor under specific conditions (e.g., insufficient evidence, Security Breach, Supervisory Authority request, mandatory law), generally limited to once per year. Audits must not compromise the security or confidentiality of Proofpoint's facilities or data. Each party bears its own audit costs."
+    },
+    {
+        "clause_id": "Schedule1_14",
+        "heading": "Termination",
+        "summarised_text": "The timeframe for Proofpoint to cease all processing and delete personal data upon suspension or termination of data processing under this DPA or SCC Clause 18 will be governed by the Services Agreement."
+    },
+    {
+        "clause_id": "Appendix1_Details",
+        "heading": "Details of the Processing",
+        "summarised_text": "This appendix, required by GDPR Article 28(3), details the processing of Customer’s Personal Data. It includes a table outlining specific Proofpoint products (e.g., Archive, CAD/CASB, Email Protection, Insider Threat Management SaaS), the categories of Data Subjects (e.g., employees, contractors, customers), the types of Personal Data processed (e.g., emails, metadata, IP addresses, user activity logs), and the corresponding Processing Operations (e.g., archiving, scanning, filtering, detecting fraud, training). Product-specific DPA Appendices with further details are incorporated if licensed. A list of Subprocessors is also provided."
+    },
+    {
+        "clause_id": "Appendix2_Security",
+        "heading": "Security of Processing",
+        "summarised_text": "This appendix outlines the technical and organizational measures Proofpoint implements to ensure an appropriate level of security for the Services, considering various factors like state of the art and risks. Measures cover User Authentication (policies, account management, two-factor VPN), Backup Copies, Computers and Access Terminals (secure VPN, anti-virus, NDAs), Access Logs (centralized logging, monitoring, periodic review), Telecommunication Systems (redundancy), Personnel Instruction (training, role separation), Use of Computers (anti-virus, acceptable use policies), Printing of Data (disabled in production), Physical Access Control (co-location vs. cloud providers), Access Control to IT Systems (unique IDs, password policies, role-based access, audit logging), Access Control to Data (segregation from corporate environment), Least Privilege Access, Security during Transfer and Processing (segregation, VPN, firewalls, TLS encryption, patching), Security during Transmission (TLS encryption), Implementation and Operations Phase Controls (automated processing), Traceability, Compliant Data Processing (automated), Availability (high-availability infrastructure, business continuity plan), and Data Separation (logical segregation via Client IDs). Product-specific security measures are detailed in additional DPA Appendices."
+    },
+    {
+        "clause_id": "Schedule2_SCC_1",
+        "heading": "Purpose and scope (SCC)",
+        "summarised_text": "These Standard Contractual Clauses (SCC) ensure GDPR compliance for personal data transfers to third countries. They define the Data Exporter (Controller) and Data Importer (Proofpoint) and apply to transfers specified in Annex I.B. The Appendix, including Annexes, is an integral part of these Clauses."
+    },
+    {
+        "clause_id": "Schedule2_SCC_2",
+        "heading": "Effect and invariability of the Clauses (SCC)",
+        "summarised_text": "These SCC provide appropriate safeguards, data subject rights, and legal remedies under GDPR Article 46, and act as standard contractual clauses under Article 28(7). They cannot be modified except for module selection or Appendix updates, but additional non-contradictory clauses are permitted. These Clauses do not affect the data exporter's GDPR obligations."
+    },
+    {
+        "clause_id": "Schedule2_SCC_3",
+        "heading": "Third-party beneficiaries (SCC)",
+        "summarised_text": "Data subjects can invoke and enforce these Clauses as third-party beneficiaries against the data exporter and/or data importer, with specific exceptions listed in the clause. This right does not prejudice other rights data subjects have under GDPR."
+    },
+    {
+        "clause_id": "Schedule2_SCC_4",
+        "heading": "Interpretation (SCC)",
+        "summarised_text": "Terms used in these Clauses have the same meaning as in Regulation (EU) 2016/679 (GDPR). The Clauses must be read and interpreted in light of GDPR provisions and not in a way that conflicts with GDPR rights and obligations."
+    },
+    {
+        "clause_id": "Schedule2_SCC_5",
+        "heading": "Hierarchy (SCC)",
+        "summarised_text": "In case of any contradiction between these Clauses and provisions in other related agreements between the Parties, these Clauses shall prevail."
+    },
+    {
+        "clause_id": "Schedule2_SCC_6",
+        "heading": "Description of the transfer(s) (SCC)",
+        "summarised_text": "The specific details of the personal data transfers, including the categories of personal data and their purposes, are outlined in Annex I.B of the DPA."
+    },
+    {
+        "clause_id": "Schedule2_SCC_7",
+        "heading": "Docking clause (SCC)",
+        "summarised_text": "This clause is explicitly marked as 'Not Applicable'."
+    },
+    {
+        "clause_id": "Schedule2_SCC_8",
+        "heading": "Data protection safeguards (SCC)",
+        "summarised_text": "The data exporter warrants that the data importer can meet its obligations under these Clauses through appropriate technical and organizational measures. The data importer must process personal data only on documented instructions, for specified purposes, and promptly inform the data exporter if unable to comply. The data exporter will make the Clauses available to data subjects, with possible redactions for confidentiality. The data importer must inform the data exporter of inaccurate data and cooperate in rectification/erasure. Processing duration is specified, with data deletion or return at the end of services. Both parties must implement appropriate security measures (detailed in Annex II), ensure personnel confidentiality, and notify the data exporter of any personal data breaches without undue delay, assisting with GDPR obligations. Specific restrictions/safeguards apply to sensitive data. Onward transfers to third parties require documented instructions and appropriate safeguards. Both parties must demonstrate compliance, with the data importer providing documentation and allowing audits."
+    },
+    {
+        "clause_id": "Schedule2_SCC_9",
+        "heading": "Use of sub-processors (SCC)",
+        "summarised_text": "The data importer has general written authorization to engage sub-processors from an agreed list, but must inform the data exporter of any changes in advance to allow for objections. Sub-processors must be engaged via written contracts with data protection obligations substantially similar to these Clauses, including third-party beneficiary rights for data subjects. The data importer remains fully responsible for sub-processor performance and must notify the data exporter of any failures. A third-party beneficiary clause with the sub-processor allows the data exporter to terminate the sub-processor contract if the data importer becomes insolvent or ceases to exist."
+    },
+    {
+        "clause_id": "Schedule2_SCC_10",
+        "heading": "Data subject rights (SCC)",
+        "summarised_text": "The data importer must promptly notify the data exporter of any data subject requests and cannot respond without the data exporter's authorization. The data importer must assist the data exporter in fulfilling its GDPR obligations to respond to data subject requests, with the specific technical and organizational measures and scope of assistance detailed in Annex II. The data importer must comply with the data exporter's instructions in this regard."
+    },
+    {
+        "clause_id": "Schedule2_SCC_11",
+        "heading": "Redress (SCC)",
+        "summarised_text": "The data importer must transparently inform data subjects of a contact point for complaints and handle them promptly. In disputes, parties will try to resolve amicably and cooperate. If a data subject invokes third-party beneficiary rights, the data importer must accept their decision to lodge a complaint with a supervisory authority or refer the dispute to competent courts. The data importer agrees to abide by binding decisions and acknowledges that data subject choices do not prejudice their rights to seek remedies."
+    },
+    {
+        "clause_id": "Schedule2_SCC_12",
+        "heading": "Liability (SCC)",
+        "summarised_text": "Each party is liable to the other for damages caused by breaching these Clauses. The data importer is liable to the data subject for damages caused by breaching third-party beneficiary rights. The data exporter is also liable to the data subject for damages caused by itself, the data importer, or its sub-processor, without prejudice to other GDPR liabilities. If the data exporter is held liable for the data importer's actions, it can claim back the corresponding compensation. If multiple parties are responsible, they are jointly and severally liable. The data importer cannot use a sub-processor's conduct to avoid its own liability."
+    },
+    {
+        "clause_id": "Schedule2_SCC_13",
+        "heading": "Supervision (SCC)",
+        "summarised_text": "If the data exporter is not established in an EU Member State but falls under GDPR Article 3(2), the supervisory authority of a Member State where affected data subjects are located (as per Annex I.C) will act as the competent authority. The data importer agrees to submit to the jurisdiction of and cooperate with this supervisory authority, including responding to enquiries, submitting to audits, and complying with adopted measures."
+    },
+    {
+        "clause_id": "Schedule2_SCC_14",
+        "heading": "Local laws and practices affecting compliance with the Clauses (SCC)",
+        "summarised_text": "Parties warrant that local laws and practices in the destination country do not prevent the data importer from fulfilling its obligations under these Clauses, based on an assessment considering transfer circumstances, local laws (including public authority access), and supplementary safeguards. The data importer must promptly notify the data exporter if it believes it is or has become subject to laws or practices inconsistent with this warranty. Following such notification, the data exporter must identify appropriate measures, suspend transfers if safeguards are insufficient, and may terminate the contract for affected processing."
+    },
+    {
+        "clause_id": "Schedule2_SCC_15",
+        "heading": "Obligations of the data importer in case of access by public authorities (SCC)",
+        "summarised_text": "The data importer must promptly notify the data exporter (and data subject, if possible) if it receives a legally binding request for personal data disclosure from a public authority or becomes aware of direct access by public authorities. If prohibited from notifying, it must seek a waiver. The data importer must regularly provide information on requests received. It must review the legality of disclosure requests, challenge unlawful ones, and provide only the minimum necessary information. All actions and assessments must be documented and made available to the data exporter and supervisory authority."
+    },
+    {
+        "clause_id": "Schedule2_SCC_16",
+        "heading": "Non-compliance with the Clauses and termination (SCC)",
+        "summarised_text": "The data importer must promptly inform the data exporter if it cannot comply with these Clauses. If the data importer breaches or cannot comply, the data exporter must suspend data transfer until compliance is restored or the contract is terminated. The data exporter can terminate the contract if suspension lasts over one month, if there's a substantial breach, or if the data importer fails to comply with a binding decision. Upon termination, transferred personal data must be returned or deleted, with certification, unless local laws prohibit. Either party can revoke agreement if the European Commission adopts an adequacy decision or GDPR becomes part of the destination country's legal framework."
+    },
+    {
+        "clause_id": "Schedule2_SCC_17",
+        "heading": "Governing law (SCC)",
+        "summarised_text": "These Clauses are governed by the law of an EU Member State that allows for third-party beneficiary rights. Specifically, this will be the law specified in the Services Agreement if it's an EU Member State, or the laws of the Netherlands if the Services Agreement is governed by the laws of a third country."
+    },
+    {
+        "clause_id": "Schedule2_SCC_18",
+        "heading": "Choice of forum and jurisdiction (SCC)",
+        "summarised_text": "Any disputes arising from these Clauses will be resolved by the courts of an EU Member State. Specifically, these will be the courts appointed in the Services Agreement if it's an EU Member State, or the Courts of Amsterdam if the Services Agreement is governed by the laws of a third country. Data subjects may also bring legal proceedings in the Member State of their habitual residence. All parties agree to submit to the jurisdiction of such courts."
+    },
+    {
+        "clause_id": "AnnexI_A",
+        "heading": "List of Parties (Annex I)",
+        "summarised_text": "This section identifies the Data Exporter as the Controller named on page 1 of the DPA, and the Data Importer as Proofpoint, Inc., a provider of email and social media security services, threat analytics, and security training."
+    },
+    {
+        "clause_id": "AnnexI_B",
+        "heading": "Description of Transfer (Annex I)",
+        "summarised_text": "This section describes the data transfer, identifying Data Subjects as the Controller's employees, contractors, and those of its customers and vendors. The Categories of Data are detailed in Appendix 1, with the explicit statement that the Controller will not transfer sensitive data to Proofpoint. The Processing Operations, including frequency, nature, purpose, and retention period, are also identified in Appendix 1."
+    },
+    {
+        "clause_id": "AnnexI_C",
+        "heading": "Competent Supervisory Authority (Annex I)",
+        "summarised_text": "This section identifies the Data Protection Authority of the Netherlands as the competent supervisory authority in accordance with Clause 13 of the SCC."
+    },
+    {
+        "clause_id": "AnnexII",
+        "heading": "Technical and Organisational Measures (Annex II)",
+        "summarised_text": "This annex states that the security, technical, and organizational measures implemented by Proofpoint to ensure the security of the data are described in detail in Appendix 2 to this DPA."
+    },
+    {
+        "clause_id": "AnnexIII",
+        "heading": "List of Sub-processors (Annex III)",
+        "summarised_text": "This annex refers to the current list of Subprocessors for the Service, which is available on the Proofpoint Trust Site at https://www.proofpoint.com/us/legal/trust."
+    }
+]
