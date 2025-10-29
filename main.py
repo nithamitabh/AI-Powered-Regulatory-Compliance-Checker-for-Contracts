@@ -7,17 +7,21 @@ Streamlit application for Contract Compliance Checking
 - Extracts clauses
 - Compares against GDPR templates
 - Displays compliance analysis
+- Sends automatic notifications for compliance failures
 """
 
 import json
 import os
 import time
 import threading
+from datetime import datetime
 import streamlit as st
 import schedule
 import agreement_comparision
 import data_extraction
 import scrapping
+import notification
+import slack_notification
 
 
 def run_scheduler():
@@ -107,9 +111,47 @@ if __name__ == "__main__":
                             json.dumps(template_data) if isinstance(template_data, (dict, list)) else template_data
                         )
                     
+                    # Parse the result for structured data
+                    parsed_result = agreement_comparision.parse_comparison_result(result)
+                    
                     # Display results
                     st.subheader("Compliance Analysis Results")
                     st.markdown(result)
+                    
+                    # Step 5: Send automatic notifications if compliance issues detected
+                    risk_score = parsed_result.get("risk_score", 0)
+                    
+                    if risk_score > 0:  # Send notification for any detected risk
+                        with st.spinner("Sending compliance notifications..."):
+                            # Prepare notification data
+                            notification_data = {
+                                "document_type": agreement_type,
+                                "risk_score": risk_score,
+                                "missing_clauses": parsed_result.get("missing_clauses", []),
+                                "compliance_risks": parsed_result.get("compliance_risks", []),
+                                "recommendations": parsed_result.get("recommendations", []),
+                                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                            }
+                            
+                            # Send email notification
+                            email_sent = notification.send_compliance_failure_notification(notification_data)
+                            
+                            # Send Slack notification (if configured)
+                            slack_sent = False
+                            if os.getenv("SLACK_WEBHOOK_URL"):
+                                slack_sent = slack_notification.send_compliance_failure_alert(notification_data)
+                            
+                            # Show notification status
+                            if email_sent or slack_sent:
+                                st.success("✅ Compliance alert notifications sent successfully!")
+                                if email_sent:
+                                    st.info(f"📧 Email sent to {os.getenv('SMTP_RECEIVER_EMAIL')}")
+                                if slack_sent:
+                                    st.info("💬 Slack notification sent")
+                            else:
+                                st.warning("⚠️ Failed to send notifications. Check your .env configuration.")
+                    else:
+                        st.success("✅ No compliance issues detected - No notifications needed")
                     
             else:
                 st.error(f"This document type is not covered under GDPR compliance checking.")

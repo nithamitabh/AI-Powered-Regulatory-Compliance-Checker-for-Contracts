@@ -245,6 +245,156 @@ def send_simple_message(text):
     return send_slack_notification(message=text)
 
 
+def send_compliance_failure_alert(report_data):
+    """
+    Send detailed alert about compliance failures to Slack.
+    
+    Args:
+        report_data (dict): Dictionary containing compliance analysis results
+            - document_type: Type of document analyzed
+            - risk_score: Risk score (0-100)
+            - missing_clauses: List or text of missing clauses
+            - compliance_risks: List or text of compliance risks
+            - recommendations: List or text of recommendations
+            - timestamp: When analysis was performed (optional)
+    
+    Returns:
+        bool: True if sent successfully, False otherwise
+    """
+    try:
+        # Extract data
+        document_type = report_data.get("document_type", "Unknown Document")
+        risk_score = report_data.get("risk_score", 0)
+        missing_clauses = report_data.get("missing_clauses", [])
+        compliance_risks = report_data.get("compliance_risks", [])
+        recommendations = report_data.get("recommendations", [])
+        timestamp = report_data.get("timestamp", "Not specified")
+        
+        # Determine risk level and emoji
+        if risk_score <= 25:
+            risk_level = "Low Risk"
+            risk_emoji = "✅"
+            color = "#36a64f"  # Green
+        elif risk_score <= 50:
+            risk_level = "Medium Risk"
+            risk_emoji = "⚠️"
+            color = "#ff9900"  # Orange
+        elif risk_score <= 75:
+            risk_level = "High Risk"
+            risk_emoji = "🔶"
+            color = "#ff6600"  # Dark orange
+        else:
+            risk_level = "Critical Risk"
+            risk_emoji = "🔴"
+            color = "#ff0000"  # Red
+        
+        # Format missing clauses
+        if isinstance(missing_clauses, list) and missing_clauses:
+            missing_clauses_text = "\n".join([f"• {clause}" for clause in missing_clauses[:5]])  # Limit to 5
+            if len(missing_clauses) > 5:
+                missing_clauses_text += f"\n• ... and {len(missing_clauses) - 5} more"
+        elif missing_clauses:
+            missing_clauses_text = str(missing_clauses)[:500]  # Limit text length
+        else:
+            missing_clauses_text = "None detected"
+        
+        # Format compliance risks
+        if isinstance(compliance_risks, list) and compliance_risks:
+            risks_text = "\n".join([f"• {risk}" for risk in compliance_risks[:5]])
+            if len(compliance_risks) > 5:
+                risks_text += f"\n• ... and {len(compliance_risks) - 5} more"
+        elif compliance_risks:
+            risks_text = str(compliance_risks)[:500]
+        else:
+            risks_text = "None detected"
+        
+        # Format recommendations
+        if isinstance(recommendations, list) and recommendations:
+            recommendations_text = "\n".join([f"• {rec}" for rec in recommendations[:3]])
+            if len(recommendations) > 3:
+                recommendations_text += f"\n• ... and {len(recommendations) - 3} more"
+        elif recommendations:
+            recommendations_text = str(recommendations)[:500]
+        else:
+            recommendations_text = "No recommendations available"
+        
+        # Build rich message blocks
+        blocks = [
+            {
+                "type": "header",
+                "text": {
+                    "type": "plain_text",
+                    "text": "⚠️ GDPR Compliance Alert",
+                    "emoji": True
+                }
+            },
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": f"*Document Type:* {document_type}\n*Analysis Date:* {timestamp}"
+                }
+            },
+            {
+                "type": "section",
+                "fields": [
+                    {
+                        "type": "mrkdwn",
+                        "text": f"*Risk Score:*\n{risk_emoji} {risk_score}/100"
+                    },
+                    {
+                        "type": "mrkdwn",
+                        "text": f"*Risk Level:*\n{risk_level}"
+                    }
+                ]
+            },
+            {
+                "type": "divider"
+            },
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": f"*❌ Missing Clauses:*\n{missing_clauses_text}"
+                }
+            },
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": f"*🚨 Compliance Risks:*\n{risks_text}"
+                }
+            },
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": f"*✅ Recommendations:*\n{recommendations_text}"
+                }
+            },
+            {
+                "type": "divider"
+            },
+            {
+                "type": "context",
+                "elements": [
+                    {
+                        "type": "mrkdwn",
+                        "text": "🤖 Automated alert from GDPR Compliance Checker - Please review and take action"
+                    }
+                ]
+            }
+        ]
+        
+        fallback_message = f"GDPR Compliance Alert: {document_type} - Risk Score {risk_score}/100 ({risk_level})"
+        
+        return send_slack_notification(message=fallback_message, blocks=blocks)
+        
+    except Exception as e:
+        print(f"Error sending compliance failure alert to Slack: {str(e)}")
+        return False
+
+
 if __name__ == "__main__":
     # Test the Slack notification
     print("\n" + "="*60)

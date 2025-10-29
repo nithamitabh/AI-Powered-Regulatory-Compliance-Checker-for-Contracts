@@ -129,6 +129,76 @@ def compare_agreements(unseen_data: str, template_data: str) -> str:
     return response.text
 
 
+def parse_comparison_result(comparison_text: str) -> dict:
+    """
+    Parse the comparison result text into structured data for notifications.
+    
+    Args:
+        comparison_text (str): The raw text output from compare_agreements
+    
+    Returns:
+        dict: Structured data containing:
+            - missing_clauses: List of missing clauses
+            - compliance_risks: List of compliance risks
+            - risk_score: Integer risk score (0-100)
+            - reasoning: Reasoning for the risk score
+            - recommendations: List of recommendations
+    """
+    import re
+    
+    result = {
+        "missing_clauses": [],
+        "compliance_risks": [],
+        "risk_score": 0,
+        "reasoning": "",
+        "recommendations": []
+    }
+    
+    try:
+        # Extract Missing Clauses
+        missing_match = re.search(r'Missing Clauses?:?\s*(.*?)(?=Potential Compliance|Risk Score|\Z)', 
+                                 comparison_text, re.DOTALL | re.IGNORECASE)
+        if missing_match:
+            missing_text = missing_match.group(1).strip()
+            # Split by bullet points or newlines
+            clauses = re.split(r'[\n\r]+[-•*]\s*|[\n\r]+\d+\.\s*', missing_text)
+            result["missing_clauses"] = [c.strip() for c in clauses if c.strip() and len(c.strip()) > 3]
+        
+        # Extract Compliance Risks
+        risks_match = re.search(r'Potential Compliance Risks?:?\s*(.*?)(?=Risk Score|Reasoning|Recommendations|\Z)', 
+                               comparison_text, re.DOTALL | re.IGNORECASE)
+        if risks_match:
+            risks_text = risks_match.group(1).strip()
+            risks = re.split(r'[\n\r]+[-•*]\s*|[\n\r]+\d+\.\s*', risks_text)
+            result["compliance_risks"] = [r.strip() for r in risks if r.strip() and len(r.strip()) > 3]
+        
+        # Extract Risk Score
+        score_match = re.search(r'Risk Score[:\s]*\(?(\d+)\)?(?:/100)?', comparison_text, re.IGNORECASE)
+        if score_match:
+            result["risk_score"] = int(score_match.group(1))
+        
+        # Extract Reasoning
+        reasoning_match = re.search(r'Reasoning:?\s*(.*?)(?=Recommendations|\Z)', 
+                                   comparison_text, re.DOTALL | re.IGNORECASE)
+        if reasoning_match:
+            result["reasoning"] = reasoning_match.group(1).strip()
+        
+        # Extract Recommendations
+        recommendations_match = re.search(r'Recommendations?:?\s*(.*?)(?=\Z)', 
+                                         comparison_text, re.DOTALL | re.IGNORECASE)
+        if recommendations_match:
+            rec_text = recommendations_match.group(1).strip()
+            recs = re.split(r'[\n\r]+[-•*]\s*|[\n\r]+\d+\.\s*', rec_text)
+            result["recommendations"] = [r.strip() for r in recs if r.strip() and len(r.strip()) > 3]
+    
+    except Exception as e:
+        print(f"Warning: Error parsing comparison result: {str(e)}")
+        # If parsing fails, return basic structure with full text in reasoning
+        result["reasoning"] = comparison_text
+    
+    return result
+
+
 if __name__ == "__main__":
     # Example usage
     doc_type = document_type("GDPR-Sample-Agreement.pdf")
